@@ -1,0 +1,4 @@
+npm create vite@latest
+cd Portfolio/
+npm i
+npm run dev
