@@ -1,13 +1,5 @@
-.big-shadow-red {
-  box-shadow: 0 0 215px 500px #fc4075;
-}
-
-.big-shadow-pink {
-  box-shadow: 0 0 215px 500px #ff8ed9;
-}
-
 .flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
