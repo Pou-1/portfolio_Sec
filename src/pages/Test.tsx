@@ -6,7 +6,7 @@ import cat from "../assets/imgs/cat.jpg";
 
 const App: React.FC = () => {
   useEffect(() => {
-    const elements = document.querySelectorAll(".card");
+    const elements = Array.from(document.querySelectorAll(".card")) as HTMLElement[];
     VanillaTilt.init(elements, {
       max: 25,
       speed: 400,
