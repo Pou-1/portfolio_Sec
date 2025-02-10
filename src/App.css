@@ -3,3 +3,9 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.trans-fast{
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.68,-0.55,0.27,1.55);
+	transition-duration: 300ms;
+}
