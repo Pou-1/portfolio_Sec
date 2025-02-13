@@ -8,10 +8,10 @@ const App: React.FC = () => {
 	useEffect(() => {
 		const elements = document.querySelectorAll(".card");
 		VanillaTilt.init(elements, {
-			max: 25,
-			speed: 400,
+			max: 5,
+			speed: 100,
 			glare: true,
-			"max-glare": 0.2,
+			"max-glare": 0.1,
 			gyroscope: false,
 		});
 	}, []);
@@ -24,7 +24,7 @@ const App: React.FC = () => {
 				<div className="absolute left-11 top-5 w-1/12 aspect-square rounded-full bg-[#C522FB]"></div>
 				<div className="absolute right-80 bottom-5 w-1/6 aspect-square rounded-full bg-[#C522FB]"></div>
 				<div
-					className="card text-white gap-x-5 p-10 relative glassIco h-96 m-8 rounded-3xl 
+					className="card text-white gap-x-5 p-10 relative glassIco h-2/3 w-4/5 m-8 rounded-3xl 
         			bg-white/5 backdrop-blur-xl border border-white/50 flex-center overflow-hidden"
 				>
 					<div className="text-5xl w-full flex flex-col gap-y-5">
