@@ -3,3 +3,16 @@
 	justify-content: center;
 	align-items: center;
 }
+
+.trans-fast-cube{
+	transition: all cubic-bezier(0.68,-0.55,0.27,1.55) 300ms;
+}
+
+.trans-fast{
+	transition: all ease-in-out 300ms;
+}
+
+::selection {
+	background: rgba(243, 46, 102, 0.1); 
+    color: #F32E66;
+}
