@@ -8,23 +8,18 @@
 }
 
 /* Start */
-.glassIco {
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	transition: 200ms;
-}
-
 .glassIco::before {
 	content: "";
 	position: absolute;
 	width: 50%;
 	height: 100%;
 	background: rgba(255, 255, 255, 0.3);
-	transform: skewX(45deg) translateX(250%);
+	transform: skewX(45deg) translateX(350%);
 }
 
 .glassIco:hover::before {
 	transition: 400ms;
-	transform: skewX(45deg) translateX(-250%);
+	transform: skewX(45deg) translateX(-350%);
 }
 
 .clip-circle-right {
