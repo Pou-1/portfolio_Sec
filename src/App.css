@@ -16,3 +16,12 @@
 	background: rgba(243, 46, 102, 0.1); 
     color: #F32E66;
 }
+
+body{
+	overflow: auto;
+	scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+	display: none;
+}
