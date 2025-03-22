@@ -1,0 +1,39 @@
+name: Deployment
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+
+      - name: Déploiement sur le VPS via SSH
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd ${{ secrets.PROJECT_PATH }}
+
+            echo "🛑 Arrêt du conteneur existant..."
+            docker-compose down || true
+
+            echo "📦 Construction de l'image..."
+            docker-compose build --no-cache
+
+            echo "🚀 Démarrage du conteneur..."
+            docker-compose up -d
+
+            echo "🧹 Nettoyage des ressources inutilisées..."
+            docker system prune -f
+
+            echo "✅ Déploiement terminé avec succès !"
