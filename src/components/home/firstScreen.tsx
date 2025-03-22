@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import cat from "../../assets/imgs/cat.jpg";
+import Picrew from "../../assets/imgs/picrew.png";
 import Nautilus from "../../assets/imgs/works/nautilus.png";
 import PtiCuisto from "../../assets/imgs/works/pti_cuisto.png";
 import InstantWeather from "../../assets/imgs/works/instant_weather.png";
-import Pomodoro from "../../assets/imgs/works/pomodoro.png";
 import ReactLogo from "../../assets/logo/ReactLogo";
 import TailwindLogo from "../../assets/logo/TailwindLogo";
 import LaravelLogo from "../../assets/logo/LaravelLogo";
@@ -50,7 +50,7 @@ function FirstScreen() {
           <div className="border-[3px] absolute top-0 border-[#F32E66] z-50 p-1 bg-red-50 m-5 rounded-full aspect-square">
             <img
               className="h-full aspect-square rounded-full"
-              src={cat}
+              src={Picrew}
               alt="Profile of Emily D'Harambure"
             />
           </div>
