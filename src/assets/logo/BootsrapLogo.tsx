@@ -21,8 +21,8 @@ const BootstrapLogo: React.FC<ReactLogoProps> = ({
           gradientTransform="translate(1.11 14.613) scale(.24566)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#9013fe"></stop>
-          <stop offset="1" stop-color="#6610f2"></stop>
+          <stop offset="0" stopColor="#9013fe"></stop>
+          <stop offset="1" stopColor="#6610f2"></stop>
         </linearGradient>
         <linearGradient
           id="b"
@@ -33,8 +33,8 @@ const BootstrapLogo: React.FC<ReactLogoProps> = ({
           gradientTransform="translate(0 52)"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#fff"></stop>
-          <stop offset="1" stop-color="#f1e5fc"></stop>
+          <stop offset="0" stopColor="#fff"></stop>
+          <stop offset="1" stopColor="#f1e5fc"></stop>
         </linearGradient>
         <filter
           id="c"
@@ -42,10 +42,10 @@ const BootstrapLogo: React.FC<ReactLogoProps> = ({
           height="249"
           x="161.9"
           y="135.46"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
           filterUnits="userSpaceOnUse"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+          <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
           <feColorMatrix
             in="SourceAlpha"
             values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
