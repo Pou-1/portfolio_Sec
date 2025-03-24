@@ -10,8 +10,6 @@ import PhPLogo from "../../assets/logo/PhPLogo";
 import BootstrapLogo from "../../assets/logo/BootsrapLogo";
 import JSLogo from "../../assets/logo/JSLogo";
 import AnimatedCard from "./AnimatedCard";
-import GithubLogo from "../../assets/logo/GithubLogo";
-import LinkedinLogo from "../../assets/logo/LinkedinLogo";
 
 const WorkDivs: React.FC<{ scrollY: number }> = ({ scrollY }) => {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
