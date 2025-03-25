@@ -51,12 +51,26 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = ({ scrollY }) => {
               (France) for a University Bachelor.
             </p>
             <div className="mt-10 flex gap-5">
-              <div className="p-4 bg-white hover:bg-[#C522FB] cursor-pointer shadow-md rounded-xl">
+              <button className="p-4 bg-white hover:bg-red-100 trans-fast cursor-pointer shadow-md rounded-xl"
+                onClick={() => window.open("https://www.linkedin.com", "_blank")}
+              >
                 <LinkedinLogo size={30} />
-              </div>
-              <div className="p-4 bg-white hover:bg-[#C522FB] cursor-pointer shadow-md rounded-xl">
+              </button>
+              <button className="p-4 bg-white hover:bg-red-100 trans-fast cursor-pointer shadow-md rounded-xl"
+                onClick={() => window.open("https://github.com/Pou-1", "_blank")}
+              >
                 <GithubLogo size={30} />
-              </div>
+              </button>
+              <button className="p-4 bg-white hover:bg-red-100 trans-fast cursor-pointer shadow-md rounded-xl"
+                onClick={() => window.location.href = "mailto:cyprien.dharambure@gmail.com"}
+              >
+                <GithubLogo size={30} />
+              </button>
+              <button className="p-4 bg-white hover:bg-red-100 trans-fast cursor-pointer shadow-md rounded-xl"
+                onClick={() => window.open("/CV_DELAPOEZEDHARAMBURE_Cyprien.pdf", "_blank")}
+              >
+                <GithubLogo size={30} />
+              </button>
             </div>
           </div>
         </div>
