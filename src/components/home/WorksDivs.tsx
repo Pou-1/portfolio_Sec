@@ -20,7 +20,7 @@ const WorkDivs: React.FC<{ scrollY: number }> = ({ scrollY }) => {
   useEffect(() => {
     if (cardsRef.current.length > 0) {
       const positions = [];
-      const offset = 100;
+      const offset = 10;
       let lastMax = offset;
 
       for (const card of cardsRef.current) {
@@ -46,7 +46,7 @@ const WorkDivs: React.FC<{ scrollY: number }> = ({ scrollY }) => {
       <h1 className="text-[#F32E66] text-2xl mb-5 shadow-md bg-white p-2 mx-2 rounded-xl text-center">
         Works
       </h1>
-      <div className="w-full pb-60 p-3 relative flex flex-col gap-10">
+      <div className="w-full pb-60 flex-center p-3 relative flex flex-col gap-10">
         {projects.map((project, index) => (
           <AnimatedCard
             key={index}
