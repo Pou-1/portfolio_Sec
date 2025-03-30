@@ -40,9 +40,7 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
             transition-all duration-700 ease-in-out 
           `}
         >
-          <div className="overflow-hidden h-full w-full relative">
-            <img src={image} alt="" className="w-full trans-fast sticky top-0" />
-          </div>
+          <div className="overflow-hidden h-[100vh] w-full relative bg-cover bg-fixed" style={{ backgroundImage: `url(${image})` }}></div>
         </div>
       </div>
     );
