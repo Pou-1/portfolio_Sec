@@ -68,7 +68,7 @@ const ScrollSnapControl = () => {
           );
         }
       },
-      { threshold: 0.6 } // Détecte la section qui est au moins à 60% visible
+      { threshold: 0.6 }
     );
 
     sectionsRef.current.forEach(
@@ -111,7 +111,17 @@ const ScrollSnapControl = () => {
           ref={(el) => (sectionsRef.current[projects.length + 1] = el)}
           className="snap-center flex-center h-screen"
         >
-          <FirstCardDiv scrollY={0} />
+          <div className="w-full h-full relative">
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+            <p>ABOUT</p>
+          </div>
         </div>
       </div>
     </article>
