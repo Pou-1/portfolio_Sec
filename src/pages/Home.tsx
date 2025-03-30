@@ -2,8 +2,7 @@ import "../App.css";
 import "../styles/test.css";
 import "../styles/home.css";
 import React, { useEffect, useState } from "react";
-import FirstCardDiv from "../components/home/FirstCardDiv";
-import WorkDivs from "../components/home/WorksDivs";
+import ScrollSnapControl from "../components/ScrollSnapControl";
 
 const App: React.FC = () => {
   const [scrollY, setScrollY] = useState<number>(0);
@@ -19,8 +18,7 @@ const App: React.FC = () => {
 
   return (
     <>
-      <FirstCardDiv scrollY={scrollY}/>
-      <WorkDivs scrollY={scrollY}/>
+      <ScrollSnapControl/>
     </>
   );
 };
