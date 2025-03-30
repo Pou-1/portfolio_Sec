@@ -96,7 +96,7 @@ const ScrollSnapControl = () => {
           <div
             ref={(el) => (sectionsRef.current[index + 1] = el)}
             key={index}
-            className="snap-center sticky top-0 flex-center h-screen"
+            className="snap-center flex-center h-screen"
           >
             <AnimatedCard2
               image={project.image}
