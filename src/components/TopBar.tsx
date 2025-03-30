@@ -1,8 +1,13 @@
 import { useTranslation } from "react-i18next";
 import Button from "./Button";
 
-const TopBar: React.FC = () => {
+type TopBarProps = {
+  activeIndex: number;
+};
+
+const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
   const { i18n } = useTranslation();
+  const sectionsNames = ["Who am i", "Works", "About"]
 
   return (
     <div className="flex flex-col justify-center p-2 z-50 w-full absolute top-2 flex-center">
@@ -13,6 +18,9 @@ const TopBar: React.FC = () => {
         >
           {i18n.language === "fr" ? "English" : "français"}
         </button>
+        {activeIndex == 0 && (sectionsNames[0])}
+        {activeIndex > 0 && activeIndex < 5 && (sectionsNames[1])}
+        {activeIndex > 4 && (sectionsNames[2])}
         <Button text="Emily D'Harambure"/>
         <Button text="Contact Me"/>
       </div>

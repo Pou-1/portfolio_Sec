@@ -41,7 +41,7 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
           `}
         >
           <div className="overflow-hidden h-full w-full relative">
-            <img src={image} alt="" className="w-full trans-fast" />
+            <img src={image} alt="" className="w-full trans-fast sticky top-0" />
           </div>
         </div>
       </div>
