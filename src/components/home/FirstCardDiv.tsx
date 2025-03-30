@@ -8,7 +8,7 @@ type AnimatedCardProps = {
   scrollY: number;
 };
 
-const FirstCardDiv: React.FC<AnimatedCardProps> = ({ scrollY }) => {
+const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
   const { t } = useTranslation();
   return (
     <>
