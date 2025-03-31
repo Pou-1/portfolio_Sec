@@ -2,19 +2,15 @@ import React from "react";
 
 type AvatarClusterProps = {
   usernames: string[];
-  key: string;
+  projectName: string;
 };
 
-const GithubAvatars: React.FC<AvatarClusterProps> = ({ usernames, key }) => {
-  usernames.forEach(element => {
-    console.log(key, element)
-  });
+const GithubAvatars: React.FC<AvatarClusterProps> = ({ usernames, projectName }) => {
   return (
     <div className="flex -space-x-4">
       {usernames.map((username, index) => (
-        <div className="group relative" key={`${key}`}>
+        <div className="group relative" key={`${projectName} - ${index}`}>
           <img
-            key={`${index} ${key}`}
             src={`https://github.com/${username}.png`}
             alt={`Avatar of ${username}`}
             className="w-12 group-hover:-translate-y-2 trans-fast h-12 rounded-full border-2 bg-white border-white shadow-lg"

@@ -17,14 +17,14 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
       <div className="w-full h-full relative flex items-end" ref={ref}>
         {isactiveIndex && (
           <div
-            className={`absolute appear-bottom2 z-20 w-full h-full flex items-end ${colorGradient} via-transparent via-80%`}
+            className={`absolute appear-bottom2 z-20 w-full h-full flex items-end ${colorGradient} via-transparent via-70% sm:via-80%`}
           >
-            <div className="p-4 flex items-end justify-between w-full">
-              <p className="text-white text-5xl w-full">{text}</p>
+            <div className="p-4 flex flex-col sm:flex-row items-end gap-5 sm:gap-0 justify-between w-full">
+              <p className="text-white text-5xl w-full text-center sm:text-left">{text}</p>
               <div className="w-full flex-center">
-                <GithubAvatars usernames={workers} key={text} />
+                <GithubAvatars usernames={workers} projectName={text} />
               </div>
-              <div className="flex gap-5 w-full justify-end">
+              <div className="flex gap-5 w-full sm:justify-end flex-center">
                 {logos.map((logo, index) => (
                   <span
                     className="bg-white/10 hover:bg-white/20 trans-fast py-2 px-4 rounded-xl"
@@ -38,9 +38,7 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
           </div>
         )}
         <div
-          className={`bg-white group relative w-full h-full flex flex-col shadow-md z-10 
-						transition-all duration-700 ease-in-out 
-					`}
+          	className={`bg-white group relative w-full h-full flex flex-col shadow-md z-10 transition-all duration-700 ease-in-out`}
         >
           <div
             className="overflow-hidden h-[100vh] w-full relative bg-cover bg-fixed bg-center"
