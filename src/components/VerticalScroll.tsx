@@ -39,7 +39,7 @@ const VerticalScroll: React.FC<VerticalScrollProps> = ({ activeIndex, setActiveI
 
       const parentRect = currentButton.offsetParent!.getBoundingClientRect();
 
-      setBlueBoxStyle((prevStyle) => ({
+      setBlueBoxStyle(() => ({
         top: Math.min(currentRect.top, targetRect.top) - parentRect.top,
         left: targetRect.left - parentRect.left,
         width: targetRect.width,
