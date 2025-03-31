@@ -1,3 +1,4 @@
+import React from "react";
 import Picrew from "../../assets/imgs/picrew.png";
 import ArrowLogo from "../../assets/logo/ArrowLogo";
 import GithubLogo from "../../assets/logo/GithubLogo";
@@ -43,7 +44,7 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 							<div className="mt-10 flex justify-between">
 								<a
 									className="p-4 bg-white hover:bg-blue-100 trans-fast cursor-pointer shadow-md rounded-xl"
-									href="https://www.linkedin.com"
+									href="https://www.linkedin.com/in/emily-dharambure"
 								>
 									<LinkedinLogo size={30} />
 								</a>

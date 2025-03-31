@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState, useRef } from "react";
 import FirstCardDiv from "./home/FirstCardDiv";
 import TopBar from "./TopBar";
