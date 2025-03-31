@@ -46,10 +46,10 @@
 
 @keyframes slideYBottom2 {
 	0% {
-		transform: translateY(400px);
+		height: 0%;
 	}
 	100% {
-		transform: translateY(0px);
+		height: 100%;
 	}
 }
 

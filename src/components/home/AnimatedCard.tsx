@@ -14,7 +14,7 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
   ({ image, text, logos, colorGradient, workers, isactiveIndex }, ref) => {
     //const [cursorHover, setCursorHover] = useState<boolean>(false);
     return (
-      <div className="w-full h-full relative" ref={ref}>
+      <div className="w-full h-full relative flex items-end" ref={ref}>
         {isactiveIndex && (
           <div
             className={`absolute appear-bottom2 z-20 w-full h-full flex items-end ${colorGradient} via-transparent via-70%`}
