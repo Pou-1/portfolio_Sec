@@ -14,7 +14,7 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
 	const sectionsNames = ["Who am i", "Works", "About"];
 
 	return (
-		<div className="flex flex-col justify-center p-2 z-50 w-full absolute top-2 flex-center">
+		<div className="flex flex-col justify-center py-2 px-8 z-50 w-full absolute top-2 flex-center">
 			<div className="rounded-full bg-red-100/40 backdrop-blur w-full gap-2 flex items-center justify-between">
 				<button
 					onClick={() =>
@@ -30,7 +30,7 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
 						<FrenchFlagLogo />
 					)}
 				</button>
-				<p className="text-xl hidden sm:flex-center text-white py-2 rounded-md w-40 px-4 bg-[#C522FB] shadow-md">
+				<p className="text-xl hidden sm:flex text-white py-2 rounded-md w-40 px-4 bg-[#C522FB] shadow-md">
 					{activeIndex == 0 && sectionsNames[0]}
 					{activeIndex > 0 &&
 						activeIndex < 5 &&
@@ -40,7 +40,7 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
 				<p className="font-bold">Emily D&apos;Harambure</p>
 				<a 
           className="rounded-full flex gap-3 text-white py-2 px-6 bg-[#F32E66] hover:bg-[#fd30e9] trans-fast m-2"
-          href="mailto:cyprien.dharambure@gmail.com"
+          href="mailto:emily.haramb@gmail.com"
         >
 					<MailLogo/>
           <p className="hidden sm:flex">{t("contactMe")}</p>
