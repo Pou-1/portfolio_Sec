@@ -17,7 +17,7 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
       <div className="w-full h-full relative flex items-end" ref={ref}>
         {isactiveIndex && (
           <div
-            className={`absolute appear-bottom2 z-20 w-full h-full flex items-end ${colorGradient} via-transparent via-70%`}
+            className={`absolute appear-bottom2 z-20 w-full h-full flex items-end ${colorGradient} via-transparent via-80%`}
           >
             <div className="p-4 flex items-end justify-between w-full">
               <p className="text-white text-5xl w-full">{text}</p>
@@ -51,5 +51,7 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
     );
   }
 );
+
+AnimatedCard.displayName = "AnimatedCard";
 
 export default AnimatedCard;

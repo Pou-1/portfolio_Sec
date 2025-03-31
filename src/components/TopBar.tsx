@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import FrenchFlagLogo from "../assets/logo/FRFlagLogo";
 import UKFlagLogo from "../assets/logo/UKFlagLogo";
@@ -36,7 +37,7 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
 						sectionsNames[1] + " - " + activeIndex}
 					{activeIndex > 4 && sectionsNames[2]}
 				</p>
-				<p className="font-bold">Emily D'Harambure</p>
+				<p className="font-bold">Emily D&apos;Harambure</p>
 				<a 
           className="rounded-full flex gap-3 text-white py-2 px-6 bg-[#F32E66] hover:bg-[#fd30e9] trans-fast m-2"
           href="mailto:cyprien.dharambure@gmail.com"
