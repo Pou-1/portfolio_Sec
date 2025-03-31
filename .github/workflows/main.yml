@@ -14,18 +14,6 @@ jobs:
       - name: Checkout du code
         uses: actions/checkout@v3
 
-      - name: Arrêt du conteneur existant
-        uses: appleboy/ssh-action@v0.1.8
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSHKEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            cd ${{ secrets.PROJECT_PATH }}
-            echo "🛑 Arrêt du conteneur existant..."
-            docker compose down || true
-
       - name: Construction de l'image Docker
         uses: appleboy/ssh-action@v0.1.8
         with:
@@ -40,6 +28,18 @@ jobs:
               echo "❌ Erreur lors du build, arrêt du pipeline."
               exit 1
             fi
+
+      - name: Arrêt du conteneur existant
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSHKEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd ${{ secrets.PROJECT_PATH }}
+            echo "🛑 Arrêt du conteneur existant..."
+            docker compose down || true
 
       - name: Démarrage du conteneur
         uses: appleboy/ssh-action@v0.1.8
