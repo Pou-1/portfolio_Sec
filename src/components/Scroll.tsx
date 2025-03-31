@@ -20,7 +20,7 @@ function Scroll() {
 
       const parentRect = currentButton.offsetParent!.getBoundingClientRect();
 
-      setBlueBoxStyle((prevStyle) => ({
+      setBlueBoxStyle(() => ({
         top: targetRect.top - parentRect.top,
         left: Math.min(currentRect.left, targetRect.left) - parentRect.left,
         width: Math.abs(currentRect.left - targetRect.left) + targetRect.width,
