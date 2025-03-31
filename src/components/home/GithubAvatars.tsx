@@ -9,7 +9,7 @@ const GithubAvatars: React.FC<AvatarClusterProps> = ({ usernames, projectName })
   return (
     <div className="flex -space-x-4">
       {usernames.map((username, index) => (
-        <div className="group relative" key={`${projectName} - ${index}`}>
+        <a className="group relative" key={`${projectName} - ${index}`} href={`https://github.com/${username}`}>
           <img
             src={`https://github.com/${username}.png`}
             alt={`Avatar of ${username}`}
@@ -18,7 +18,7 @@ const GithubAvatars: React.FC<AvatarClusterProps> = ({ usernames, projectName })
           <p className="group-hover:opacity-100 shadow-md whitespace-nowrap opacity-0 trans-fast -translate-y-2 absolute -top-full bg-white p-2 rounded-md">
             {username}
           </p>
-        </div>
+        </a>
       ))}
     </div>
   );
