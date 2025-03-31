@@ -21,37 +21,43 @@
 	clip-path: circle(35% at 10% 10%);
 }
 
-
 @keyframes fadeIn {
 	0% {
-	  opacity: 0;
-	  transform: scale(0.8);
+		opacity: 0;
+		transform: scale(0.8);
 	}
 	100% {
-	  opacity: 1;
-	  transform: scale(1);
+		opacity: 1;
+		transform: scale(1);
 	}
-  }
-  
-  .appear {
+}
+
+.appear {
 	opacity: 0; /* Start hidden */
 	animation: fadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  }
-  
-  .appear:nth-child(1) {
-	animation-delay: 0ms; /* First circle */
-  }
-  
-  .appear:nth-child(2) {
-	animation-delay: 200ms; /* Second circle */
-  }
-  
-  .appear:nth-child(3) {
-	animation-delay: 400ms; /* Third circle */
-  }
-  
-  .appear:nth-child(4) {
-	animation-delay: 600ms; /* Fourth circle */
-  }
+}
 
-  
+.appear:nth-child(1) {
+	animation-delay: 0ms; /* First circle */
+}
+
+.appear:nth-child(2) {
+	animation-delay: 200ms; /* Second circle */
+}
+
+.appear:nth-child(3) {
+	animation-delay: 400ms; /* Third circle */
+}
+
+.appear:nth-child(4) {
+	animation-delay: 600ms; /* Fourth circle */
+}
+
+.bg-dots {
+	background-image: radial-gradient(
+		circle,
+		rgba(243, 46, 102, 0.1) 8%,
+		transparent 8%
+	);
+	background-size: 50px 50px;
+}

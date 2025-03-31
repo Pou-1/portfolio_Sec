@@ -10,7 +10,8 @@ i18n
           welcome: "Hello, I'm",
           name: "Emily D'Harambure",
           study: "I'm a student in Software & Web Development.",
-          currently: "I'm currently studying at the University of Caen, in Normandy (France) for a University Bachelor."
+          currently: "I'm currently studying at the University of Caen, in Normandy (France) for a University Bachelor.",
+          contactMe: "Contact me",
         },
       },
       fr: {
@@ -18,7 +19,8 @@ i18n
           welcome: "Bonjour, je suis",
           name: "Emily D'Harambure",
           study: "Je suis étudiante en Développement Logiciel.",
-          currently: "Je suis actuellement en études pour un BUT informatique à l'Université Grand Ouest Normandie."
+          currently: "Je suis actuellement en études pour un BUT informatique à l'Université de Normandie.",
+          contactMe: "Me contacter",
         },
       },
     },
