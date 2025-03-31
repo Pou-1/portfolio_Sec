@@ -30,7 +30,7 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
 						<FrenchFlagLogo />
 					)}
 				</button>
-				<p className="text-xl text-white py-2 rounded-md w-40 flex-center px-4 bg-[#C522FB] shadow-md">
+				<p className="text-xl hidden sm:flex-center text-white py-2 rounded-md w-40 px-4 bg-[#C522FB] shadow-md">
 					{activeIndex == 0 && sectionsNames[0]}
 					{activeIndex > 0 &&
 						activeIndex < 5 &&
@@ -43,7 +43,7 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
           href="mailto:cyprien.dharambure@gmail.com"
         >
 					<MailLogo/>
-          <p>{t("contactMe")}</p>
+          <p className="hidden sm:flex">{t("contactMe")}</p>
 				</a>
 			</div>
 		</div>
