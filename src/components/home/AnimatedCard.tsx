@@ -24,7 +24,7 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
               <div className="w-full flex-center">
                 <GithubAvatars usernames={workers} projectName={text} />
               </div>
-              <div className="flex gap-5 w-full sm:justify-end flex-center">
+              <div className="flex gap-5 w-full sm:justify-end justify-center">
                 {logos.map((logo, index) => (
                   <span
                     className="bg-white/10 hover:bg-white/20 trans-fast py-2 px-4 rounded-xl"

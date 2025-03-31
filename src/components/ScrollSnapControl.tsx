@@ -12,6 +12,7 @@ import LaravelLogo from "../assets/logo/LaravelLogo";
 import PhPLogo from "../assets/logo/PhPLogo";
 import BootstrapLogo from "../assets/logo/BootsrapLogo";
 import JSLogo from "../assets/logo/JSLogo";
+import VerticalScroll from "./VerticalScroll";
 
 const ScrollSnapControl = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
@@ -88,6 +89,9 @@ const ScrollSnapControl = () => {
 	return (
 		<article className="flex flex-col gap-10">
 			<TopBar activeIndex={activeIndex} />
+      <div className="absolute flex justify-end items-center p-8 w-screen h-screen">
+        <VerticalScroll activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
+      </div>
 			<div className="overflow-auto flex flex-col snap-mandatory snap-both bg-white w-full h-screen bg-dots">
 				<div
 					ref={(el) => (sectionsRef.current[0] = el)}
