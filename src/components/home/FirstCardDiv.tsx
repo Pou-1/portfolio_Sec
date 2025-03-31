@@ -43,34 +43,19 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 							<div className="mt-10 flex justify-between">
 								<a
 									className="p-4 bg-white hover:bg-blue-100 trans-fast cursor-pointer shadow-md rounded-xl"
-									onClick={() =>
-										window.open(
-											"https://www.linkedin.com",
-											"_blank"
-										)
-									}
+									href="https://www.linkedin.com"
 								>
 									<LinkedinLogo size={30} />
 								</a>
 								<a
 									className="p-4 bg-white hover:bg-black/10 trans-fast cursor-pointer shadow-md rounded-xl"
-									onClick={() =>
-										window.open(
-											"https://github.com/Pou-1",
-											"_blank"
-										)
-									}
+									href="https://github.com/Pou-1"
 								>
 									<GithubLogo size={30} />
 								</a>
 								<a
 									className="p-4 bg-white text-red-700 hover:bg-red-100 trans-fast cursor-pointer shadow-md rounded-xl"
-									onClick={() =>
-										window.open(
-											"/CV_DELAPOEZEDHARAMBURE_Cyprien.pdf",
-											"_blank"
-										)
-									}
+									href="/CV_DELAPOEZEDHARAMBURE_Cyprien.pdf"
 								>
 									<CVLogo size={30} />
 								</a>

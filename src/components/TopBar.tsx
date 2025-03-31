@@ -37,10 +37,13 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
 					{activeIndex > 4 && sectionsNames[2]}
 				</p>
 				<p className="font-bold">Emily D'Harambure</p>
-				<button className="rounded-full flex gap-3 text-white py-2 px-6 bg-[#F32E66] hover:bg-[#fd30e9] trans-fast m-2">
+				<a 
+          className="rounded-full flex gap-3 text-white py-2 px-6 bg-[#F32E66] hover:bg-[#fd30e9] trans-fast m-2"
+          href="mailto:cyprien.dharambure@gmail.com"
+        >
 					<MailLogo/>
           <p>{t("contactMe")}</p>
-				</button>
+				</a>
 			</div>
 		</div>
 	);
