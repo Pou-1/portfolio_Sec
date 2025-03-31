@@ -1,44 +1,52 @@
 import React, { forwardRef } from "react";
+import GithubAvatars from "./GithubAvatars";
 
 type AnimatedCardProps = {
   image: string;
   text: string;
   logos: React.ReactNode[];
+  colorGradient: string;
+  workers: string[];
+  isactiveIndex: boolean;
 };
 
 const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
-  ({ image, text, logos }, ref) => {
+  ({ image, text, logos, colorGradient, workers, isactiveIndex }, ref) => {
     //const [cursorHover, setCursorHover] = useState<boolean>(false);
-
     return (
-      <div className="p-10 h-screen" ref={ref}>
-      <div
-        
-        className={`bg-white group relative w-full h-full p-2 flex flex-col shadow-md rounded-xl z-10 
-        transition-all duration-700 ease-in-out
-      `}
-      >
-        <div className="overflow-hidden rounded-2xl h-full w-full p-4 relative">
-          <img
-            src={image}
-            alt=""
-            className="w-full h-full group-hover:scale-110 trans-fast"
-          />
-          <div className="inset-0 trans-fast flex-center absolute w-full h-full rounded-2xl opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 bg-white/5 backdrop-blur-xl">
-            <button className="rounded-full w-56 aspect-square shadow-md text-white font-semibold text-xl flex-center bg-[#F32E66]">
-              Voir le projet
-            </button>
+      <div className="w-full h-full relative" ref={ref}>
+        {isactiveIndex && (
+          <div
+            className={`absolute appear-bottom2 z-20 w-full h-full flex items-end ${colorGradient} via-transparent via-70%`}
+          >
+            <div className="p-4 flex items-end justify-between w-full">
+              <p className="text-white text-5xl w-full">{text}</p>
+              <div className="w-full flex-center">
+                <GithubAvatars usernames={workers} key={text} />
+              </div>
+              <div className="flex gap-5 w-full justify-end">
+                {logos.map((logo, index) => (
+                  <span
+                    className="bg-white/10 hover:bg-white/20 trans-fast py-2 px-4 rounded-xl"
+                    key={index}
+                  >
+                    {logo}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
+        )}
+        <div
+          className={`bg-white group relative w-full h-full flex flex-col shadow-md z-10 
+						transition-all duration-700 ease-in-out 
+					`}
+        >
+          <div
+            className="overflow-hidden h-[100vh] w-full relative bg-cover bg-fixed bg-center"
+            style={{ backgroundImage: `url(${image})` }}
+          ></div>
         </div>
-        <div className="pt-4 w-full flex justify-between h-24 z-10 text-lg">
-          <p>{text}</p>
-          <div className="flex gap-2">
-            {logos.map((logo, index) => (
-              <span key={index}>{logo}</span>
-            ))}
-          </div>
-        </div>
-      </div>
       </div>
     );
   }

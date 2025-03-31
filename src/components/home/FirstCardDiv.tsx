@@ -3,7 +3,6 @@ import ArrowLogo from "../../assets/logo/ArrowLogo";
 import GithubLogo from "../../assets/logo/GithubLogo";
 import LinkedinLogo from "../../assets/logo/LinkedinLogo";
 import { useTranslation } from "react-i18next";
-import MailLogo from "../../assets/logo/MailLogo";
 import CVLogo from "../../assets/logo/CVLogo";
 
 type AnimatedCardProps = {
@@ -41,8 +40,8 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 							</div>
 							<p className="text-sm">{t("study")}</p>
 							<p className="text-sm">{t("currently")}</p>
-							<div className="mt-10 flex gap-5">
-								<button
+							<div className="mt-10 flex justify-between">
+								<a
 									className="p-4 bg-white hover:bg-blue-100 trans-fast cursor-pointer shadow-md rounded-xl"
 									onClick={() =>
 										window.open(
@@ -52,8 +51,8 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 									}
 								>
 									<LinkedinLogo size={30} />
-								</button>
-								<button
+								</a>
+								<a
 									className="p-4 bg-white hover:bg-black/10 trans-fast cursor-pointer shadow-md rounded-xl"
 									onClick={() =>
 										window.open(
@@ -63,17 +62,8 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 									}
 								>
 									<GithubLogo size={30} />
-								</button>
-								<button
-									className="p-4 bg-white hover:bg-violet-100 text-violet-700 trans-fast cursor-pointer shadow-md rounded-xl"
-									onClick={() =>
-										(window.location.href =
-											"mailto:cyprien.dharambure@gmail.com")
-									}
-								>
-									<MailLogo size={30} />
-								</button>
-								<button
+								</a>
+								<a
 									className="p-4 bg-white text-red-700 hover:bg-red-100 trans-fast cursor-pointer shadow-md rounded-xl"
 									onClick={() =>
 										window.open(
@@ -83,7 +73,7 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 									}
 								>
 									<CVLogo size={30} />
-								</button>
+								</a>
 							</div>
 						</div>
 					</div>

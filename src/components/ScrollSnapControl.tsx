@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef } from "react";
 import FirstCardDiv from "./home/FirstCardDiv";
 import TopBar from "./TopBar";
-import AnimatedCard2 from "./home/AnimatedCard2";
+import AnimatedCard from "./home/AnimatedCard";
 import CrocoDive from "../assets/imgs/works/CrocoDive.png";
 import Nautilus from "../assets/imgs/works/nautilus.png";
 import PtiCuisto from "../assets/imgs/works/pti_cuisto.png";
@@ -18,45 +18,45 @@ const ScrollSnapControl = () => {
 	const [activeIndex, setActiveIndex] = useState(0);
 	const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 
-	const projects = [
-		{
-			image: CrocoDive,
-			text: "CrocoDive",
-			logos: [
-				<ReactLogo size={35} key="react" />,
-				<TailwindLogo size={35} key="tailwind" />,
-			],
-			colorGradient: "bg-gradient-to-b from-transparent to-green-800",
-			workers: ["Pou-1", "juliensailly"],
-		},
-		{
-			image: Nautilus,
-			text: "Nautilus",
-			logos: [
-				<LaravelLogo size={35} key="laravel" />,
-				<PhPLogo size={35} key="php" />,
-			],
-			colorGradient: "bg-gradient-to-b from-transparent to-blue-800",
-			workers: ["Pou-1", "juliensailly"],
-		},
-		{
-			image: PtiCuisto,
-			text: "Pti Cuisto",
-			logos: [
-				<BootstrapLogo size={35} key="bootstrap" />,
-				<PhPLogo size={35} key="php" />,
-			],
-			colorGradient: "bg-gradient-to-b from-transparent to-red-800",
-			workers: ["Pou-1"],
-		},
-		{
-			image: InstantWeather,
-			text: "Instant Weather",
-			logos: [<JSLogo size={35} key="react" />],
-			colorGradient: "bg-gradient-to-b from-transparent to-gray-800",
-			workers: ["Pou-1"],
-		},
-	];
+  const projects = [
+    {
+      image: CrocoDive,
+      text: "CrocoDive",
+      logos: [
+        <ReactLogo size={35} key="react" />,
+        <TailwindLogo size={35} key="tailwind" />,
+      ],
+      colorGradient: "bg-gradient-to-b from-transparent to-green-800",
+      workers: ["Pou-1", "juliensailly", "waterfox-dev", "SirSoliloque", "Mehliug-SG"],
+    },
+    {
+      image: Nautilus,
+      text: "Nautilus",
+      logos: [
+        <LaravelLogo size={35} key="laravel" />,
+        <PhPLogo size={35} key="php" />,
+      ],
+      colorGradient: "bg-gradient-to-b from-transparent to-blue-800",
+      workers: ["Pou-1", "juliensailly", "AlensoLopes", "AndgelBrissaud", "Elrigabel", "LucBUTGH", "PetitGens", "Mehliug-SG", "SirSoliloque", "waterfox-dev"],
+    },
+    {
+      image: PtiCuisto,
+      text: "Pti Cuisto",
+      logos: [
+        <BootstrapLogo size={35} key="bootstrap" />,
+        <PhPLogo size={35} key="php" />,
+      ],
+      colorGradient: "bg-gradient-to-b from-transparent to-red-800",
+      workers: ["Pou-1", "AndgelBrissaud", "Elrigabel", "waterfox-dev"],
+    },
+    {
+      image: InstantWeather,
+      text: "Instant Weather",
+      logos: [<JSLogo size={35} key="react" />],
+      colorGradient: "bg-gradient-to-b from-transparent to-gray-800",
+      workers: ["Pou-1", "AndgelBrissaud", "Elrigabel", "waterfox-dev"],
+    },
+  ];
 
 	useEffect(() => {
 		const observer = new IntersectionObserver(
@@ -102,23 +102,16 @@ const ScrollSnapControl = () => {
 						key={index}
 						className="snap-center flex-center h-screen"
 					>
-						<AnimatedCard2
+						<AnimatedCard
 							image={project.image}
 							text={project.text}
 							logos={project.logos}
 							colorGradient={project.colorGradient}
 							workers={project.workers}
+              isactiveIndex={activeIndex === index + 1}
 						/>
 					</div>
 				))}
-				<div
-					ref={(el) =>
-						(sectionsRef.current[projects.length + 1] = el)
-					}
-					className="snap-center flex-center h-screen"
-				>
-					<div className="w-full h-full relative"></div>
-				</div>
 			</div>
 		</article>
 	);

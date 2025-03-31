@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import FrenchFlagLogo from "../assets/logo/FRFlagLogo";
 import UKFlagLogo from "../assets/logo/UKFlagLogo";
 import { t } from "i18next";
+import MailLogo from "../assets/logo/MailLogo";
 
 type TopBarProps = {
 	activeIndex: number;
@@ -35,9 +36,10 @@ const TopBar: React.FC<TopBarProps> = ({ activeIndex }) => {
 						sectionsNames[1] + " - " + activeIndex}
 					{activeIndex > 4 && sectionsNames[2]}
 				</p>
-				<p>Emily D'Harambure</p>
-				<button className="rounded-full text-white py-2 px-6 bg-[#F32E66] hover:bg-[#fd30e9] trans-fast m-2">
-					{t("contactMe")}
+				<p className="font-bold">Emily D'Harambure</p>
+				<button className="rounded-full flex gap-3 text-white py-2 px-6 bg-[#F32E66] hover:bg-[#fd30e9] trans-fast m-2">
+					<MailLogo/>
+          <p>{t("contactMe")}</p>
 				</button>
 			</div>
 		</div>
