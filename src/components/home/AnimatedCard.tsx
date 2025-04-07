@@ -1,18 +1,21 @@
 import React, { forwardRef } from "react";
 import GithubAvatars from "./GithubAvatars";
+import { useCursor } from "../cursor/CursorFunct";
 
 type AnimatedCardProps = {
   image: string;
   text: string;
   logos: React.ReactNode[];
+  logosLink: string[];
   colorGradient: string;
   workers: string[];
   isactiveIndex: boolean;
 };
 
 const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
-  ({ image, text, logos, colorGradient, workers, isactiveIndex }, ref) => {
-    //const [cursorHover, setCursorHover] = useState<boolean>(false);
+  ({ image, text, logos, logosLink, colorGradient, workers, isactiveIndex }, ref) => {
+    const { handleHover, resetCursor } = useCursor();
+    
     return (
       <div className="w-full h-full relative flex items-end" ref={ref}>
         {isactiveIndex && (
@@ -26,12 +29,20 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
               </div>
               <div className="flex gap-5 w-full sm:justify-end justify-center">
                 {logos.map((logo, index) => (
-                  <span
+                  <a
+                    href={logosLink[index]}
                     className="bg-white/10 hover:bg-white/20 trans-fast py-2 px-4 rounded-xl"
                     key={index}
+                    onMouseEnter={(e) =>
+                      handleHover(e.currentTarget, 10, {
+                        background: "bg-transparent",
+                        borderWidth: "4px",
+                      })
+                    }
+                    onMouseLeave={resetCursor}
                   >
                     {logo}
-                  </span>
+                  </a>
                 ))}
               </div>
             </div>

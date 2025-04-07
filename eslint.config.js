@@ -14,6 +14,7 @@ export default defineConfig([
     rules: {
       "react/react-in-jsx-scope": "off",
       "quotes": ["off", "single"],
+      "react/prop-types": "off",
     },
   }
 ]);
