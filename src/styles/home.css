@@ -131,11 +131,6 @@
 	width: 0px;
 }
 
-button, a {
-	cursor: none;
-}
-
-
 @keyframes slideIn {
 	from {
 	  opacity: 0;

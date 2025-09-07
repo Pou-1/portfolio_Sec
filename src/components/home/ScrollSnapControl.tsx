@@ -2,7 +2,16 @@ import { useEffect, useState, useRef } from "react";
 import FirstCardDiv from "./FirstCardDiv";
 import TopBar from "../navigation/TopBar";
 import AnimatedCard from "./AnimatedCard";
-import CrocoDive from "../../assets/imgs/works/CrocoDive.png";
+
+import CrocoDive from "../../assets/imgs/works/crocoDive/CrocoDive.svg";
+import CrocoDiveEng from "../../assets/imgs/works/crocoDive/CrocoDiveEng.svg";
+import CrocoDiveDark from "../../assets/imgs/works/crocoDive/CrocoDiveDark.svg";
+import CrocoDiveDarkEng from "../../assets/imgs/works/crocoDive/CrocoDiveDarkEng.svg";
+import CrocodiveMobile from "../../assets/imgs/works/crocoDive/CrocodiveMobile.svg";
+import CrocodiveMobileEng from "../../assets/imgs/works/crocoDive/CrocodiveMobileEng.svg";
+import CrocodiveMobileDark from "../../assets/imgs/works/crocoDive/CrocodiveDarkMobile.svg";
+import CrocodiveMobileDarkEng from "../../assets/imgs/works/crocoDive/CrocodiveDarkMobileEng.svg";
+
 import Nautilus from "../../assets/imgs/works/nautilus.png";
 import PtiCuisto from "../../assets/imgs/works/pti_cuisto.png";
 import InstantWeather from "../../assets/imgs/works/instant_weather.png";
@@ -22,6 +31,13 @@ const ScrollSnapControl = () => {
   const projects = [
     {
       image: CrocoDive,
+      imageEng: CrocoDiveEng,
+      imageDark: CrocoDiveDark,
+      imageDarkEng: CrocoDiveDarkEng,
+      imageMobile: CrocodiveMobile,
+      imageMobileEng: CrocodiveMobileEng,
+      imageMobileDark: CrocodiveMobileDark,
+      imageMobileDarkEng: CrocodiveMobileDarkEng,
       text: "CrocoDive",
       logos: [
         <ReactLogo size={35} key="react" />,
@@ -39,6 +55,13 @@ const ScrollSnapControl = () => {
     },
     {
       image: Nautilus,
+      imageEng: CrocoDiveEng,
+      imageDark: CrocoDiveDark,
+      imageDarkEng: CrocoDiveDarkEng,
+      imageMobile: CrocodiveMobile,
+      imageMobileEng: CrocodiveMobileEng,
+      imageMobileDark: CrocodiveMobileDark,
+      imageMobileDarkEng: CrocodiveMobileDarkEng,
       text: "Nautilus",
       logos: [
         <LaravelLogo size={35} key="laravel" />,
@@ -61,6 +84,13 @@ const ScrollSnapControl = () => {
     },
     {
       image: PtiCuisto,
+      imageEng: CrocoDiveEng,
+      imageDark: CrocoDiveDark,
+      imageDarkEng: CrocoDiveDarkEng,
+      imageMobile: CrocodiveMobile,
+      imageMobileEng: CrocodiveMobileEng,
+      imageMobileDark: CrocodiveMobileDark,
+      imageMobileDarkEng: CrocodiveMobileDarkEng,
       text: "Pti Cuisto",
       logos: [
         <BootstrapLogo size={35} key="bootstrap" />,
@@ -72,6 +102,13 @@ const ScrollSnapControl = () => {
     },
     {
       image: InstantWeather,
+      imageEng: CrocoDiveEng,
+      imageDark: CrocoDiveDark,
+      imageDarkEng: CrocoDiveDarkEng,
+      imageMobile: CrocodiveMobile,
+      imageMobileEng: CrocodiveMobileEng,
+      imageMobileDark: CrocodiveMobileDark,
+      imageMobileDarkEng: CrocodiveMobileDarkEng,
       text: "Instant Weather",
       logos: [<JSLogo size={35} key="react" />],
       logosLinks: ["https://en.wikipedia.org/wiki/JavaScript"],
@@ -140,6 +177,13 @@ const ScrollSnapControl = () => {
           >
             <AnimatedCard
               image={project.image}
+              imageEng={project.imageEng}
+              imageDark={project.imageDark}
+              imageDarkEng={project.imageDarkEng}
+              imageMobile={project.imageMobile}
+              imageMobileEng={project.imageMobileEng}
+              imageMobileDark={project.imageMobileDark}
+              imageMobileDarkEng={project.imageMobileDarkEng}
               text={project.text}
               logos={project.logos}
               logosLink={project.logosLinks}

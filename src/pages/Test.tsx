@@ -18,6 +18,10 @@ const App: React.FC = () => {
         <div className="z-30 flex-center bg-customDarkDarker p-4 h-20 w-full">
           <ButtonCursor2 />
         </div>
+
+        <div className="bg-[conic-gradient(var(--tw-gradient-stops))] p-16 animate-spin from-blue-600 to-sky-400 to-50% h-40 aspect-square rounded-full">
+          <div className="bg-white w-full h-full rounded-full"/>
+          </div>
       </div>
     </CursorProvider>
   );
