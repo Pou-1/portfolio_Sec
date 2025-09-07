@@ -8,7 +8,7 @@ import { CursorProvider } from "../components/cursor/CursorFunct";
 
 const App: React.FC = () => {
   return (
-    <div className="cursor-none">
+    <div>
       <CursorProvider>
         <ScrollSnapControl />
         <Cursor />
