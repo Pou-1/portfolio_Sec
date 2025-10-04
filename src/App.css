@@ -4,29 +4,54 @@
 	align-items: center;
 }
 
-.trans-fast-cube{
-	transition: all cubic-bezier(0.68,-0.55,0.27,1.55) 300ms;
+.trans-fast-cube {
+	transition: all cubic-bezier(0.68, -0.55, 0.27, 1.55) 300ms;
 }
 
-.trans-fast{
+.trans-fast {
 	transition: all ease-in-out 300ms;
 }
 
-::selection {
-	background: rgba(243, 46, 102, 0.1); 
-    color: #F32E66;
+.trans-slow {
+	transition: all ease-in-out 1000ms;
 }
 
-body{
+::selection {
+	background: rgba(243, 46, 102, 0.1);
+	color: #f32e66;
+}
+
+body {
 	overflow: auto;
 	scrollbar-width: none; /* Firefox */
 }
 
-::-webkit-scrollbar {
-	display: none;
-}
-
 .transition-parallax {
 	transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-  }
-  
+}
+
+body {
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+/* Firefox */
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #f32e66 white;
+}
+
+/* Other browsers */
+*::-webkit-scrollbar {
+	width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #000000;
+	border-radius: 5px;
+	border: 2px solid #ffffff;
+}

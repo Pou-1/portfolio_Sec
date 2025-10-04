@@ -7,20 +7,30 @@ import MailLogo from "../../assets/logo/MailLogo";
 import ThemeToggle from "../buttons/ThemeToggle";
 import { useCursor } from "../cursor/CursorFunct";
 
-const TopBar: React.FC = () => {
+type TopBarProps = {
+	scroll: number;
+};
+const TopBar: React.FC<TopBarProps> = ({ scroll }) => {
 	const { i18n } = useTranslation();
 	const { handleHover, resetCursor } = useCursor();
 
 	return (
-		<div className="absolute z-50 flex flex-col justify-center w-full px-8 py-2 top-2 flex-center">
-			<div className="flex items-center justify-between w-full gap-2 rounded-full bg-red-100/40 dark:bg-customDark/40 backdrop-blur">
+		<div className="fixed z-50 flex flex-col justify-center w-full py-2 px-28 top-2 flex-center">
+			<div className="relative flex items-center justify-between w-full gap-2 overflow-hidden">
+				<div
+					className={`
+						${scroll > 860 && "rounded-[4rem]"}
+						${scroll < 860 && "rounded-[50px]"}
+						absolute w-full h-full dark:border-customDarkLight border trans-fast bg-white/40 dark:bg-customDark/40 backdrop-blur
+					`}
+				/>
 				<button
 					onClick={() =>
 						i18n.changeLanguage(
 							i18n.language === "fr" ? "en" : "fr"
 						)
 					}
-					className="p-4 text-red-800 dark:hover:bg-customDark hover:bg-green-100 trans-fast z-[101] relative rounded-l-full"
+					className="p-4 text-red-800 dark:hover:bg-customDark hover:bg-yellow-100 trans-fast z-[101] relative rounded-l-full"
 					onMouseEnter={(e) =>
 						handleHover(e.currentTarget, 0, {
 							background: "bg-transparent",
@@ -36,11 +46,11 @@ const TopBar: React.FC = () => {
 					)}
 				</button>
 				<ThemeToggle />
-				<p className="font-bold dark:text-customRed">
+				<p className="font-bold z-[2] dark:text-white">
 					Emily D&apos;Harambure
 				</p>
 				<a
-					className="gap-3 pr-6 m-2 mr-3 rounded-full flex-center bg-customRed/10 text-customRed trans-fast"
+					className="gap-3 pr-6 m-2 mr-3 z-[2] rounded-full flex-center bg-customRed/10 text-customRed trans-fast"
 					href="mailto:emily.haramb@gmail.com"
 					onMouseEnter={(e) =>
 						handleHover(e.currentTarget, 5, {

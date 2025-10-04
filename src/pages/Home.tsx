@@ -7,14 +7,14 @@ import Cursor from "../components/cursor/Cursor";
 import { CursorProvider } from "../components/cursor/CursorFunct";
 
 const App: React.FC = () => {
-  return (
-    <div className="cursor-none">
-      <CursorProvider>
-        <ScrollSnapControl />
-        <Cursor />
-      </CursorProvider>
-    </div>
-  );
+	return (
+		<div className="">
+			<CursorProvider>
+				<ScrollSnapControl />
+				<Cursor />
+			</CursorProvider>
+		</div>
+	);
 };
 
 export default App;

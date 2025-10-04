@@ -18,15 +18,11 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 	const themeContext = useContext(ThemeContext);
 
 	return (
-		<div className="relative flex-col w-full h-screen border-b flex-center border-customDark">
-			<div className="relative max-w-3xl p-5 mx-auto mt-20 ml-4 mr-4">
-				{/* Circle top left */}
-				<div className="absolute top-0 left-0 z-20 w-20 h-20 -translate-x-1/2 -translate-y-1/2 rounded-full md:w-32 md:h-32 bg-customRed" />
-				{/* Circle bottom right */}
-				<div className="absolute bottom-0 right-0 w-16 h-16 translate-x-1/2 translate-y-1/2 rounded-full md:w-28 md:h-28 bg-customGreen" />
-
+		<div className="relative flex-col w-screen h-screen flex-center">
+			<div className="relative max-w-3xl p-5 mx-auto mt-20 flex-center">
 				{/* Content */}
 				<div className="relative z-30 flex flex-col w-full h-full shadow-lg bg-white/50 dark:bg-customDark/50 dark:text-white backdrop-blur-xl rounded-xl md:flex-row">
+					{/* IMG DIV */}
 					<div className="w-full p-5 flex-center">
 						<img
 							src={Picrew}
@@ -34,6 +30,7 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 							className="w-64 rounded-full md:w-full aspect-square"
 						/>
 					</div>
+					{/* TEXT DIV */}
 					<div className="flex flex-col justify-center p-6">
 						<div className="mb-5">
 							<h1>{t("welcome")}</h1>

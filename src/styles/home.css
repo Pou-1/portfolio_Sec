@@ -120,49 +120,67 @@
 	animation-delay: 600ms; /* Fourth circle */
 }
 
-/* Firefox */
-* {
-	scrollbar-width: none;
-	scrollbar-color: rgba(209, 213, 219, 0.8) transparent;
-}
-
-/* WebKit (Chrome, Edge, Safari) */
-::-webkit-scrollbar {
-	width: 0px;
-}
-
-button, a {
+button,
+a {
 	cursor: none;
 }
 
-
 @keyframes slideIn {
 	from {
-	  opacity: 0;
-	  transform: translateY(20px);
+		opacity: 0;
+		transform: translateY(20px);
 	}
 	to {
-	  opacity: 1;
-	  transform: translateY(0);
+		opacity: 1;
+		transform: translateY(0);
 	}
-  }
-  
-  @keyframes slideOut {
+}
+
+@keyframes slideOut {
 	from {
-	  opacity: 1;
-	  transform: translateY(0);
+		opacity: 1;
+		transform: translateY(0);
 	}
 	to {
-	  opacity: 0;
-	  transform: translateY(-20px);
+		opacity: 0;
+		transform: translateY(-20px);
 	}
-  }
-  
-  .text-enter {
+}
+
+.text-enter {
 	animation: slideIn 0.3s ease-out forwards;
-  }
-  
-  .text-exit {
+}
+
+.text-exit {
 	animation: slideOut 0.3s ease-out forwards;
-  }
-  
+}
+
+.bentoGrid > div {
+	background-color: rgb(247, 247, 247);
+	border: 1px black;
+	border-radius: 4rem;
+	--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+		0 2px 4px -2px rgb(0 0 0 / 0.1);
+	--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
+		0 2px 4px -2px var(--tw-shadow-color);
+	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+	transition: all cubic-bezier(0.175, -0.885, 0.32, 1.275) 500ms;
+}
+
+.bentoGrid > div:hover {
+	border-radius: 10rem;
+}
+
+@keyframes InfiniteScroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.BentoLogoAnim {
+	animation: InfiniteScroll 10s linear infinite;
+}
