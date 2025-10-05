@@ -120,11 +120,6 @@
 	animation-delay: 600ms; /* Fourth circle */
 }
 
-button,
-a {
-	cursor: none;
-}
-
 @keyframes slideIn {
 	from {
 		opacity: 0;
@@ -156,8 +151,8 @@ a {
 }
 
 .bentoGrid > div {
-	background-color: rgb(247, 247, 247);
-	border: 1px black;
+	background-color: rgb(247, 247, 247, 0.2);
+	border: 1px #ebedf0 solid;
 	border-radius: 4rem;
 	--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
 		0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -166,6 +161,7 @@ a {
 	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
 		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 	transition: all cubic-bezier(0.175, -0.885, 0.32, 1.275) 500ms;
+	backdrop-filter: blur(10px);
 }
 
 .bentoGrid > div:hover {

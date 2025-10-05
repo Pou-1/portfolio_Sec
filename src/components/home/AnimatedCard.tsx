@@ -1,9 +1,18 @@
-import React, { forwardRef } from "react";
+import React, { forwardRef, useContext, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import GithubAvatars from "./GithubAvatars";
 import { useCursor } from "../cursor/CursorFunct";
+import { ThemeContext } from "../ThemeProvider";
 
 type AnimatedCardProps = {
   image: string;
+  imageEng: string;
+  imageDark: string;
+  imageDarkEng: string;
+  imageMobile: string;
+  imageMobileEng: string;
+  imageMobileDark: string;
+  imageMobileDarkEng: string;
   text: string;
   logos: React.ReactNode[];
   logosLink: string[];
@@ -13,9 +22,52 @@ type AnimatedCardProps = {
 };
 
 const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
-  ({ image, text, logos, logosLink, colorGradient, workers, isactiveIndex }, ref) => {
+  (
+    {
+      image,
+      imageEng,
+      imageDark,
+      imageDarkEng,
+      imageMobile,
+      imageMobileEng,
+      imageMobileDark,
+      imageMobileDarkEng,
+      text,
+      logos,
+      logosLink,
+      colorGradient,
+      workers,
+      isactiveIndex,
+    },
+    ref
+  ) => {
     const { handleHover, resetCursor } = useCursor();
-    
+    const { i18n } = useTranslation();
+    const themeContext = useContext(ThemeContext);
+
+    const isDarkMode = themeContext?.isDarkMode ?? false;
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+      const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+      checkMobile();
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
+    }, []);
+
+    const getImage = () => {
+      const lang = i18n.language;
+      if (isMobile) {
+        if (isDarkMode) return lang === "fr" ? imageMobileDark : imageMobileDarkEng;
+        return lang === "fr" ? imageMobile : imageMobileEng;
+      } else {
+        if (isDarkMode) return lang === "fr" ? imageDark : imageDarkEng;
+        return lang === "fr" ? image : imageEng;
+      }
+    };
+
+    const backgroundImage = getImage();
+
     return (
       <div className="w-full h-full relative flex items-end" ref={ref}>
         {isactiveIndex && (
@@ -48,13 +100,11 @@ const AnimatedCard = forwardRef<HTMLDivElement, AnimatedCardProps>(
             </div>
           </div>
         )}
-        <div
-          	className={`bg-white group relative w-full h-full flex flex-col shadow-md z-10 transition-all duration-700 ease-in-out`}
-        >
+        <div className="bg-white group relative w-full h-full flex flex-col shadow-md z-10 transition-all duration-700 ease-in-out">
           <div
             className="overflow-hidden h-[100vh] w-full relative bg-cover bg-fixed bg-center"
-            style={{ backgroundImage: `url(${image})` }}
-          ></div>
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          />
         </div>
       </div>
     );
