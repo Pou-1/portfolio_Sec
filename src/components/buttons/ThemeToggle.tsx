@@ -1,8 +1,6 @@
 import { useContext } from "react";
 import { ThemeContext } from "../ThemeProvider";
 import { useCursor } from "../cursor/CursorFunct";
-import StarLogo from "../../assets/logo/StarLogo";
-import StarLogoSVG from "../../assets/logo/CS_Star_12.svg";
 
 const ThemeToggle = () => {
 	const themeContext = useContext(ThemeContext);

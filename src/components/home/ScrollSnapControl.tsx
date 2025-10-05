@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import FirstCardDiv from "./FirstCardDiv";
 import TopBar from "../navigation/TopBar";
+/*
 import CrocoDive from "../../assets/imgs/works/CrocoDive.png";
 import Nautilus from "../../assets/imgs/works/nautilus.png";
 import PtiCuisto from "../../assets/imgs/works/pti_cuisto.png";
@@ -10,14 +11,14 @@ import TailwindLogo from "../../assets/logo/TailwindLogo";
 import LaravelLogo from "../../assets/logo/LaravelLogo";
 import PhPLogo from "../../assets/logo/PhPLogo";
 import BootstrapLogo from "../../assets/logo/BootsrapLogo";
-import JSLogo from "../../assets/logo/JSLogo";
+import JSLogo from "../../assets/logo/JSLogo";*/
 import BentoDiv from "./bento/BentoDiv";
 
 const ScrollSnapControl = () => {
 	const sectionsRef = useRef<(HTMLDivElement | null)[]>([]);
 	const [scroll, setScroll] = useState(0);
 
-	const projects = [
+	/*const projects = [
 		{
 			image: CrocoDive,
 			text: "CrocoDive",
@@ -76,7 +77,7 @@ const ScrollSnapControl = () => {
 			colorGradient: "bg-gradient-to-b from-transparent to-gray-800",
 			workers: ["Pou-1", "AndgelBrissaud", "Elrigabel", "waterfox-dev"],
 		},
-	];
+	];*/
 
 	useEffect(() => {
 		const handleScroll = () => {
