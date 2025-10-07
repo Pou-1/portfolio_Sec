@@ -1,39 +1,39 @@
 import React from "react";
 
 type ReactLogoProps = {
-	size?: number | string;
-	className?: string;
+    size?: number | string;
+    className?: string;
 };
 
 const KotlinLogo: React.FC<ReactLogoProps> = ({
-	size = 24,
-	className = "",
+    size = 24,
+    className = "",
 }) => {
-	return (
-		<svg
-			viewBox="0 0 128 128"
-			className={className}
-			width={size}
-			height={size}
-		>
-			<defs>
-				<linearGradient
-					id="a"
-					x1="500.003"
-					x2="-.097"
-					y1="579.106"
-					y2="1079.206"
-					gradientTransform="translate(15.534 -96.774) scale(.1939)"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop offset=".003" stop-color="#e44857"></stop>
-					<stop offset=".469" stop-color="#c711e1"></stop>
-					<stop offset="1" stop-color="#7f52ff"></stop>
-				</linearGradient>
-			</defs>
-			<path d="M112.484 112.484H15.516V15.516h96.968L64 64Zm0 0"></path>
-		</svg>
-	);
+    return (
+        <svg
+            viewBox="0 0 128 128"
+            className={className}
+            width={size}
+            height={size}
+        >
+            <defs>
+                <linearGradient
+                    id="a"
+                    x1="500.003"
+                    x2="-.097"
+                    y1="579.106"
+                    y2="1079.206"
+                    gradientTransform="translate(15.534 -96.774) scale(.1939)"
+                    gradientUnits="userSpaceOnUse"
+                >
+                    <stop offset=".003" stopColor="#e44857"></stop>
+                    <stop offset=".469" stopColor="#c711e1"></stop>
+                    <stop offset="1" stopColor="#7f52ff"></stop>
+                </linearGradient>
+            </defs>
+            <path d="M112.484 112.484H15.516V15.516h96.968L64 64Zm0 0"></path>
+        </svg>
+    );
 };
 
 export default KotlinLogo;

@@ -151,21 +151,7 @@
 }
 
 .bentoGrid > div {
-	background-color: rgb(247, 247, 247, 0.2);
-	border: 1px #ebedf0 solid;
-	border-radius: 4rem;
-	--tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
-		0 2px 4px -2px rgb(0 0 0 / 0.1);
-	--tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),
-		0 2px 4px -2px var(--tw-shadow-color);
-	box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
-		var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 	transition: all cubic-bezier(0.175, -0.885, 0.32, 1.275) 500ms;
-	backdrop-filter: blur(10px);
-}
-
-.bentoGrid > div:hover {
-	border-radius: 10rem;
 }
 
 @keyframes InfiniteScroll {
@@ -178,5 +164,5 @@
 }
 
 .BentoLogoAnim {
-	animation: InfiniteScroll 10s linear infinite;
+	animation: InfiniteScroll 30s linear infinite;
 }
