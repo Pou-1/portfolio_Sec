@@ -56,7 +56,7 @@ const FirstCardDiv: React.FC<AnimatedCardProps> = () => {
 								<LinkedinLogo size={30} />
 							</a>
 							<a
-								className="p-4 text-white bg-white shadow-md hover:bg-black/10 hover:shadow-none dark:bg-customDarkLight trans-fast rounded-xl"
+								className="p-4 text-black bg-white shadow-md dark:text-white hover:bg-black/10 hover:shadow-none dark:bg-customDarkLight trans-fast rounded-xl"
 								href="https://github.com/Pou-1"
 								onMouseEnter={(e) =>
 									handleHover(e.currentTarget, 10, {

@@ -9,14 +9,13 @@ type ReactLogoProps = {
 const GithubLogo: React.FC<ReactLogoProps> = ({
 	size = 24,
 	className = "",
-	color = "#ffff",
 }) => {
 	return (
 		<svg
 			viewBox="0 0 128 128"
 			className={className}
 			width={size}
-			fill={color}
+			fill="currentColor"
 			height={size}
 		>
 			<g>
