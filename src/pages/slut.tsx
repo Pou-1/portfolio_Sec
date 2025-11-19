@@ -82,7 +82,7 @@ const App: React.FC = () => {
                     <img src={img15} alt="" className="h-96 shadow-md rounded-xl" />
                 </div>
                 <div className="text-6xl text-[#ffba00] font-bold flex-center rounded-[2rem]">
-                    tes cadeau t'attendent a la maison hehe :3
+                    tes cadeau t'attendent a la maison hehe :3 
                 </div>
             </div>
         </CursorProvider>
