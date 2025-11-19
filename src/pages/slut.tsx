@@ -19,7 +19,6 @@ import img13 from "../assets/imgs/slut/13.jpg";
 import img14 from "../assets/imgs/slut/14.jpg";
 import img15 from "../assets/imgs/slut/15.jpg";
 import video1 from "../assets/imgs/slut/16.mp4";
-import video2 from "../assets/imgs/slut/17.mp4";
 
 
 const App: React.FC = () => {
@@ -82,7 +81,6 @@ const App: React.FC = () => {
                     <img src={img14} alt="" className="h-96 shadow-md rounded-xl" />
                     <img src={img15} alt="" className="h-96 shadow-md rounded-xl" />
                     <video src={video1} className="h-96 shadow-md rounded-xl" controls />
-                    <video src={video2} className="h-96 shadow-md rounded-xl" controls />
                 </div>
                 <div className="text-6xl text-[#ffba00] font-bold flex-center rounded-[2rem]">
                     tes cadeau t'attendent a la maison hehe :3
