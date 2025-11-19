@@ -11,9 +11,9 @@ function App() {
     <ThemeProvider>
       <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/slut" element={<Home />} />
             <Route path="/test" element={<Test />} />
-            <Route path="/slut" element={<Slut />} />
+            <Route path="/" element={<Slut />} />
           </Routes>
       </Router>
     </ThemeProvider>
