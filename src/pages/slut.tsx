@@ -80,7 +80,6 @@ const App: React.FC = () => {
                     <img src={img13} alt="" className="h-96 shadow-md rounded-xl" />
                     <img src={img14} alt="" className="h-96 shadow-md rounded-xl" />
                     <img src={img15} alt="" className="h-96 shadow-md rounded-xl" />
-                    <video src={video1} className="h-96 shadow-md rounded-xl" controls />
                 </div>
                 <div className="text-6xl text-[#ffba00] font-bold flex-center rounded-[2rem]">
                     tes cadeau t'attendent a la maison hehe :3
