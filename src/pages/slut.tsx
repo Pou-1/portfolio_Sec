@@ -18,7 +18,6 @@ import img12 from "../assets/imgs/slut/12.jpg";
 import img13 from "../assets/imgs/slut/13.jpg";
 import img14 from "../assets/imgs/slut/14.jpg";
 import img15 from "../assets/imgs/slut/15.jpg";
-import video1 from "../assets/imgs/slut/16.mp4";
 
 
 const App: React.FC = () => {
